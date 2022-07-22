@@ -1,0 +1,270 @@
+
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+h2 {
+  vertical-align: center;
+  text-align: center;
+}
+
+section {
+  width: 100vw;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+main{
+    overflow: auto;
+    margin: 0 4%;
+}
+
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #00BAF0;
+  background: linear-gradient(to left, #d30000, #bb0101);
+  color: #FFF;
+  height: 50px;
+  width: 100%;
+  padding: 1em;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu > li {
+  margin: 0 1em;
+  overflow: hidden;
+}
+
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+@media (max-width: 700px) { 
+  .menu-button-container {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu li {
+    border: 1px solid #333;
+    height: 2.5rem;
+    padding: 0.5rem;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5rem 0;
+    width: 100%;
+    color: white;
+    background-color: #222;
+  }
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+}
+
+.Home{
+    background-image: url("imagens/revenda.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+section {
+    width: 100%;
+    overflow: hidden;
+}
+
+#nav{
+    color: #FFF;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+#titulo{
+    width: 100%;
+    font-size: 2rem;
+    padding: 5px;
+}
+
+#phome{
+    font-size: 1rem;
+    text-align: justify;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+}
+
+#h2home{
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#h2veiculos{
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#h2veiculos{
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#inicio{
+    margin: 50px auto;
+    width: 100%;
+}
+
+.veiculos{
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1%;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    overflow: hidden;
+}
+
+.veiculos img{
+    width: 30%;
+    border: solid black;
+    border-radius: 10px;
+    margin-bottom: 0px;
+}
+
+#footer{
+    background-color: #bb0101;
+    color: #fff;
+    padding: 50px ;
+}
+
+#pfooter{
+    text-align: center;
+    align-items: center;
+}
+
+#pcontato{
+    padding: 2px;
+}
+
+@media only screen and (max-width: 700px) {
+    main{
+        overflow: auto;
+        margin: 0 auto;
+    }
+    html {
+        font-size: 2vh;
+    }
+
+    body{
+        font-size: 29px;
+    }
+.menu{
+    text-align: center;
+}
+
+.inicio{
+    padding: 35px;
+}
+.veiculos{
+    padding: 35px;
+}
+.veiculos img{
+    width: 100%;
+    height: auto;
+}
+.veiculos{
+    padding: 35px;
+}
+.veiculos img{
+    width: 100%;
+    height: auto;
+}
+#footer{
+    padding: 35px;
+}
+
+}
+#veiculos {
+    overflow: auto;
+}
